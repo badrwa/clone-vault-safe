@@ -180,6 +180,42 @@ export default {
 				'shimmer': {
 					"0%": { backgroundPosition: "-200% 0" },
 					"100%": { backgroundPosition: "200% 0" }
+				},
+				'particle-float': {
+					"0%, 100%": { transform: "translateY(0px) translateX(0px) rotate(0deg)" },
+					"25%": { transform: "translateY(-15px) translateX(5px) rotate(90deg)" },
+					"50%": { transform: "translateY(-30px) translateX(-5px) rotate(180deg)" },
+					"75%": { transform: "translateY(-15px) translateX(-10px) rotate(270deg)" }
+				},
+				'neon-pulse': {
+					"0%, 100%": { 
+						textShadow: "0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 15px hsl(var(--primary))",
+						filter: "brightness(1)"
+					},
+					"50%": { 
+						textShadow: "0 0 10px hsl(var(--accent)), 0 0 20px hsl(var(--accent)), 0 0 30px hsl(var(--accent))",
+						filter: "brightness(1.2)"
+					}
+				},
+				'wave': {
+					"0%, 100%": { transform: "scaleY(1)" },
+					"50%": { transform: "scaleY(1.5)" }
+				},
+				'morphing': {
+					"0%, 100%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
+					"25%": { borderRadius: "40% 60% 70% 30% / 40% 70% 30% 60%" },
+					"50%": { borderRadius: "30% 70% 40% 60% / 70% 40% 60% 30%" },
+					"75%": { borderRadius: "70% 30% 60% 40% / 30% 60% 40% 70%" }
+				},
+				'sparkle': {
+					"0%, 100%": { 
+						opacity: "0", 
+						transform: "scale(0) rotate(0deg)" 
+					},
+					"50%": { 
+						opacity: "1", 
+						transform: "scale(1) rotate(180deg)" 
+					}
 				}
 			},
 			animation: {
@@ -193,7 +229,12 @@ export default {
 				'scale-in': 'scale-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
 				'rotate-slow': 'rotate-slow 20s linear infinite',
 				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
-				'shimmer': 'shimmer 2s infinite'
+				'shimmer': 'shimmer 2s infinite',
+				'particle-float': 'particle-float 12s ease-in-out infinite',
+				'neon-pulse': 'neon-pulse 3s ease-in-out infinite',
+				'wave': 'wave 2s ease-in-out infinite',
+				'morphing': 'morphing 8s ease-in-out infinite',
+				'sparkle': 'sparkle 2s ease-in-out infinite'
 			}
 		}
 	},
