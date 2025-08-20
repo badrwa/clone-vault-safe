@@ -216,6 +216,103 @@ export default {
 						opacity: "1", 
 						transform: "scale(1) rotate(180deg)" 
 					}
+				},
+				'energy-orbit': {
+					"0%": { 
+						transform: "translateX(0) translateY(0) rotate(0deg)",
+						opacity: "0.4"
+					},
+					"25%": { 
+						transform: "translateX(100px) translateY(-50px) rotate(90deg)",
+						opacity: "0.8"
+					},
+					"50%": { 
+						transform: "translateX(0) translateY(-100px) rotate(180deg)",
+						opacity: "1"
+					},
+					"75%": { 
+						transform: "translateX(-100px) translateY(-50px) rotate(270deg)",
+						opacity: "0.8"
+					},
+					"100%": { 
+						transform: "translateX(0) translateY(0) rotate(360deg)",
+						opacity: "0.4"
+					}
+				},
+				'particle-trail': {
+					"0%, 100%": { 
+						transform: "translate(-50%, -50%) scale(1)",
+						opacity: "1"
+					},
+					"50%": { 
+						transform: "translate(-50%, -50%) scale(2)",
+						opacity: "0.5"
+					}
+				},
+				'scan-vertical': {
+					"0%": { 
+						top: "-2px",
+						opacity: "0"
+					},
+					"50%": { 
+						opacity: "1"
+					},
+					"100%": { 
+						top: "100%",
+						opacity: "0"
+					}
+				},
+				'scan-horizontal': {
+					"0%": { 
+						left: "-2px",
+						opacity: "0"
+					},
+					"50%": { 
+						opacity: "1"
+					},
+					"100%": { 
+						left: "100%",
+						opacity: "0"
+					}
+				},
+				'drift': {
+					"0%": { transform: "translateX(0) translateY(0)" },
+					"25%": { transform: "translateX(20px) translateY(-10px)" },
+					"50%": { transform: "translateX(-10px) translateY(-20px)" },
+					"75%": { transform: "translateX(-20px) translateY(10px)" },
+					"100%": { transform: "translateX(0) translateY(0)" }
+				},
+				'glitch': {
+					"0%, 100%": { 
+						transform: "translateX(0)",
+						filter: "hue-rotate(0deg)"
+					},
+					"20%": { 
+						transform: "translateX(-2px)",
+						filter: "hue-rotate(90deg)"
+					},
+					"40%": { 
+						transform: "translateX(2px)",
+						filter: "hue-rotate(180deg)"
+					},
+					"60%": { 
+						transform: "translateX(-1px)",
+						filter: "hue-rotate(270deg)"
+					},
+					"80%": { 
+						transform: "translateX(1px)",
+						filter: "hue-rotate(360deg)"
+					}
+				},
+				'quantum-field': {
+					"0%, 100%": { 
+						backgroundPosition: "0% 50%",
+						opacity: "0.1"
+					},
+					"50%": { 
+						backgroundPosition: "100% 50%",
+						opacity: "0.3"
+					}
 				}
 			},
 			animation: {
@@ -234,7 +331,14 @@ export default {
 				'neon-pulse': 'neon-pulse 3s ease-in-out infinite',
 				'wave': 'wave 2s ease-in-out infinite',
 				'morphing': 'morphing 8s ease-in-out infinite',
-				'sparkle': 'sparkle 2s ease-in-out infinite'
+				'sparkle': 'sparkle 2s ease-in-out infinite',
+				'energy-orbit': 'energy-orbit 15s ease-in-out infinite',
+				'particle-trail': 'particle-trail 2s ease-in-out infinite',
+				'scan-vertical': 'scan-vertical 8s ease-in-out infinite',
+				'scan-horizontal': 'scan-horizontal 6s ease-in-out infinite',
+				'drift': 'drift 20s ease-in-out infinite',
+				'glitch': 'glitch 0.5s infinite',
+				'quantum-field': 'quantum-field 4s ease infinite'
 			}
 		}
 	},
